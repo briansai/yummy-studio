@@ -5,5 +5,5 @@ export interface NavOption {
 
 export interface NavListProps {
   options: NavOption[];
-  spacing: number;
+  classes: string;
 }

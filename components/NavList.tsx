@@ -1,14 +1,14 @@
 import Link from 'next/link';
 import { NavListProps } from '@/types';
 
-const NavList = ({ options, spacing }: NavListProps) => {
+const NavList = ({ options, classes }: NavListProps) => {
   return (
     <div className="flex-between">
       {options.map((option) => {
         const { title, url } = option;
 
         return (
-          <Link key={title} href={url} className={`px-${spacing}`}>
+          <Link key={title} href={url} className={`${classes}`}>
             {title}
           </Link>
         );
