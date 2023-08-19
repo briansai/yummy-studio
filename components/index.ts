@@ -1,6 +1,6 @@
 import Navigation from './Navigation';
 import NavBar from './NavBar';
 import NavTop from './NavTop';
-import NavList from './NavList';
+import OptionList from './OptionList';
 
-export { NavTop, NavList, Navigation, NavBar };
+export { NavTop, OptionList, Navigation, NavBar };

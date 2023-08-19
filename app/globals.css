@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  min-width: 300px;
 }
 
 /* START: General styles */
@@ -33,3 +34,30 @@
   @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;
 }
 /* END: General styles */
+
+/* Underline on Hover */
+.underline {
+  display: inline;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+.underline:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: -5px;
+  background: #9f8600;
+  height: 2px;
+  transition-property: left right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.underline:hover:after,
+.underline:focus:after,
+.underline:active:after {
+  right: 0;
+}
+/* End Underline on Hover */

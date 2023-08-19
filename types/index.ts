@@ -1,9 +1,10 @@
-export interface NavOption {
+export interface Option {
   title: string;
   url: string;
 }
 
-export interface NavListProps {
-  options: NavOption[];
-  classes: string;
+export interface OptionListProps {
+  options: Option[];
+  linkClasses?: string;
+  titleClasses?: string;
 }

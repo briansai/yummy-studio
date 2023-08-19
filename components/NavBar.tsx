@@ -1,6 +1,7 @@
 'use client';
-import { screenWidth } from '@/constants/screenDim';
 import Image from 'next/image';
+import { OptionList } from '.';
+import { navBarOptions, screenWidth } from '@/constants';
 import { useScreenDimensions } from 'use-screen-dimensions';
 
 const NavBar = () => {
@@ -8,9 +9,9 @@ const NavBar = () => {
 
   return (
     <div
-      className={`leading-[10rem] padding-x ${
-        width < screenWidth.medium && 'flex-center'
-      }`}
+      className={
+        'leading-[10rem] padding-x w-screen border-b-2 border-gray-200 flex-row flex-between md:justify-center'
+      }
     >
       <Image
         src="/logo.png"
@@ -19,6 +20,13 @@ const NavBar = () => {
         height={200}
         className="object-contain"
       />
+      {width > screenWidth.medium && (
+        <OptionList
+          options={navBarOptions}
+          linkClasses={'px-6'}
+          titleClasses={'underline'}
+        />
+      )}
     </div>
   );
 };
