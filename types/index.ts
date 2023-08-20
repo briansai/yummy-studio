@@ -10,5 +10,5 @@ export interface OptionListProps {
   linkClasses?: string;
   titleClasses?: string;
   selectedOpt?: string;
-  setSelectedOpt?: Dispatch<SetStateAction<string>>;
+  setSelectedOpt?: (selectedOpt: string) => void;
 }

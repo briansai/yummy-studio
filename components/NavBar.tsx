@@ -8,12 +8,12 @@ import { useState } from 'react';
 
 const NavBar = () => {
   const { width } = useScreenDimensions();
-  const [selectedOpt, setSelectedOpt] = useState<string>('Home');
+  const [selectedOpt, setSelectedOpt] = useState('Home');
 
   return (
     <div
       className={
-        'leading-[10rem] padding-x w-screen border-b-2 border-gray-200 flex-row flex-between md:justify-center'
+        'padding-x w-screen border-b-2 border-gray-200 flex-row flex-between md:justify-center'
       }
     >
       <Image

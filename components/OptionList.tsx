@@ -6,10 +6,10 @@ const OptionList = ({
   linkClasses,
   titleClasses,
   selectedOpt,
-  setSelectedOpt,
+  setSelectedOpt = (selectedOpt: string) => {},
 }: OptionListProps) => {
   return (
-    <div className="text-center">
+    <div className="text-center whitespace-nowrap">
       {options.map((option) => {
         const { title, url } = option;
         const createUnderline = (): string => {
@@ -27,7 +27,7 @@ const OptionList = ({
             key={title}
             href={url}
             className={`${linkClasses}`}
-            onClick={(e) => {
+            onClick={(e): void => {
               e.preventDefault();
               setSelectedOpt(title);
             }}
