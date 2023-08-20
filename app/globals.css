@@ -36,13 +36,13 @@
 /* END: General styles */
 
 /* Underline on Hover */
-.underline {
+.aniUnderline {
   display: inline;
   position: relative;
   overflow: hidden;
   text-decoration: none;
 }
-.underline:after {
+.aniUnderline:after {
   content: '';
   position: absolute;
   z-index: -1;
@@ -55,9 +55,9 @@
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
 }
-.underline:hover:after,
-.underline:focus:after,
-.underline:active:after {
+.aniUnderline:hover:after,
+.aniUnderline:focus:after,
+.aniUnderline:active:after {
   right: 0;
 }
 /* End Underline on Hover */

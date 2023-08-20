@@ -1,11 +1,14 @@
 'use client';
+
 import Image from 'next/image';
 import { OptionList } from '.';
 import { navBarOptions, screenWidth } from '@/constants';
 import { useScreenDimensions } from 'use-screen-dimensions';
+import { useState } from 'react';
 
 const NavBar = () => {
   const { width } = useScreenDimensions();
+  const [selectedOpt, setSelectedOpt] = useState<string>('Home');
 
   return (
     <div
@@ -24,7 +27,8 @@ const NavBar = () => {
         <OptionList
           options={navBarOptions}
           linkClasses={'px-6'}
-          titleClasses={'underline'}
+          selectedOpt={selectedOpt}
+          setSelectedOpt={setSelectedOpt}
         />
       )}
     </div>

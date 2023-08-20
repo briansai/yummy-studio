@@ -1,9 +1,9 @@
 const navBarOptions = [
-  { title: 'Home', url: '/' },
-  { title: 'About Us', url: '/' },
-  { title: 'Products', url: '/' },
-  { title: 'Blog', url: '/' },
-  { title: 'Contacts', url: '/' },
+  { title: 'Home', url: '/', dropdown: [] },
+  { title: 'About Us', url: '/', dropdown: [] },
+  { title: 'Products', url: '/', dropdown: [] },
+  { title: 'Blog', url: '/', dropdown: [] },
+  { title: 'Contacts', url: '/', dropdown: [] },
 ];
 
 const storeOptions = [
