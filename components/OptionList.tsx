@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { OptionListProps } from '@/types';
 
 const OptionList = ({
@@ -8,18 +9,20 @@ const OptionList = ({
   selectedOpt,
   setSelectedOpt = (selectedOpt: string) => {},
 }: OptionListProps) => {
+  // create a new option component
+  //
   return (
     <div className="text-center whitespace-nowrap">
       {options.map((option) => {
         const { title, url } = option;
-        const createUnderline = (): string => {
+        const createHoverEffect = (): string => {
           if (selectedOpt !== title) {
             return 'aniUnderline';
           } else if (selectedOpt === title) {
             return 'border-b-2 border-[#9f8600] pb-[2px]';
           }
 
-          return '';
+          return 'hover:text-[#9f8600]';
         };
 
         return (
@@ -32,7 +35,7 @@ const OptionList = ({
               setSelectedOpt(title);
             }}
           >
-            <span className={`${titleClasses} ${createUnderline()}`}>
+            <span className={`${titleClasses} ${createHoverEffect()}`}>
               {title}
             </span>
           </Link>
